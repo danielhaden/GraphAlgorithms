@@ -18,7 +18,9 @@ NestedTriangleGraph[n_] :=
   ];
 
 SulankeGraph[] :=
-	CompleteGraph[6];
+	Graph[Join[EdgeList[CompleteGraph[6]], 
+				Flatten[Outer[#1 <-> #2 &, Range[1, 6], Range[7, 11]]],
+				MapThread[#1 <-> #2 &, {Range[7, 11], Append[Range[8, 11], 7]}]]]
 				
 EndPackage[]
 
