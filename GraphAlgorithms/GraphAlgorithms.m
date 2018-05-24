@@ -18,6 +18,9 @@ NestedTriangleGraph[n_] :=
      						      Transpose[{ConstantArray[0.5, n], 
      						      			N[Rest[Subdivide[n]]]}]]
   ];
+
+SulankeGraph[] :=
+	CompleteGraph[6];
 				
 EndPackage[]
 
